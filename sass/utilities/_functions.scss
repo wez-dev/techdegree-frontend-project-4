@@ -1,0 +1,27 @@
+//    This project demonstrates use of:
+//    * SASS _partials
+//    * @import using _index.scss to organise _partials
+//    * Variables
+//    * Variable lists
+//    * "&" parent selector - nested
+//    * @mixins for common code blocks
+//    * @extend building on code from .selector 
+//    * @mixins passing variables and applying @if logic 
+//    * SASS functions passing and returning a unit 
+//    * SASS functions applying calculation to get dynamic unit measurment
+//    * @for loops creating dynamic .selector names
+//    * @for loops which make use of #{$ iteration} concatenate
+//    * @for loops which iterate through $lists
+//    * SASS colour functions: lighten(), darken() adjust-hue(), desaturate()
+/* ============================================= */
+/*              Functions                        */
+/*   Functions only show in SASS code            */
+/*                                               */
+/* ============================================= */
+// Dynamic Width based on how many columns wide the flexbox element is
+@function flexy-width($i) {
+    // Divide 100 / total columns used by project to return the width of one single column
+    $one-col-width: (100/12) * 1%;//Put * by 1% to return % value
+    $dynamic-col-width: ($one-col-width * $i);// Multiply one single column width by how many columns the element's width spans
+    @return $dynamic-col-width;//Return the width value
+}

@@ -1,0 +1,28 @@
+// Lightens color for either background, font color or both - default is both
+@mixin lighten-element-color($color: grey, $background: 'yes', $text: 'yes'){
+    
+    $lightened-color: lighten($color, 15%);
+   
+    @if $background == 'yes'{
+    
+        background-color: $lightened-color;
+    } 
+   
+    @if $text == 'yes'{
+    
+        color: $lightened-color;
+    
+    }@else{     
+    
+        color: $color;
+    }
+}
+
+// Re-usable center style
+@mixin block-center{
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}

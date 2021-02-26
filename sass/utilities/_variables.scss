@@ -1,0 +1,35 @@
+// = = = = = = = = = = = = 
+//      Colors
+// = = = = = = = = = = = = 
+// Main colors
+$color-primary: #777;
+$accent: #58e1c1;
+$accent-secondary: #fff;
+
+// Theme color (Main)
+$default-col: #51ddfc;
+$error-col: #e4757a;
+$info-col: #927bc1;
+$success-col: #63cc82;
+$warning-col: #fd7856;
+
+// Additional colors
+$link: $default-col;
+$border: #ccc;
+
+// Theme color (Variations)
+$default-lighten: lighten( $default-col, 15% );
+$default-hue: darken( $default-col, 25% );
+$error-desat: desaturate( $error-col, 20% );
+$info-lighten: lighten( $info-col, 15% );
+$success-lighten: lighten( $success-col, 10% );
+$success-hue: adjust-hue( $success-col, 35% );
+$warning-lighten: lighten( $warning-col, 10% );
+
+// Theme color list
+$theme-colors: ($info-col, $warning-col, $info-lighten, $default-lighten, $success-lighten, $default-hue, $error-desat, $warning-lighten, $error-col, $success-col, $default-col, $success-hue);
+
+// = = = = = = = = = = = = 
+//      Units 
+// = = = = = = = = = = = = 
+$mobile: 768px;
